@@ -30,7 +30,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 
-gem 'rails_admin', '~> 2.0'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'

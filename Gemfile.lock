@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/mshibuya/remotipart.git
+  revision: a1860d64aef484047bc1ef50e2f19ef2480eacf9
+  specs:
+    remotipart (1.4.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -209,7 +215,6 @@ GEM
       ffi (~> 1.0)
     redis (4.2.2)
     regexp_parser (1.8.0)
-    remotipart (1.4.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -290,8 +295,9 @@ DEPENDENCIES
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
-  rails_admin (~> 2.0)
+  rails_admin (>= 1.0.0.rc)
   redis (~> 4.0)
+  remotipart!
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
