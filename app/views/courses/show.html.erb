@@ -1,0 +1,9 @@
+<h1>This is course SHOW</h1>
+
+<% @courses.each do |course| %>
+  <p><%= course.description %></p>
+  <p><%= course.theory %></p>
+  <p><%= course.practice %></p>
+  <p><%= course.requirements %></p>
+  <p><%= course.length %></p>
+<% end %>
