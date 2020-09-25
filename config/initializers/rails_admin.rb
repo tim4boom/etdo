@@ -3,6 +3,26 @@ RailsAdmin.config do |config|
     redirect_to main_app.root_path unless current_user && current_user.admin
   end
 
+  config.model Course do
+    list do
+      field :name
+      field :description
+      field :theory
+      field :practice
+      field :requirements
+      field :length
+    end
+
+    edit do
+      field :name
+      field :description
+      field :theory
+      field :practice
+      field :requirements
+      field :length
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
