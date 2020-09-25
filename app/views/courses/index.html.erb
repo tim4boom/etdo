@@ -1,5 +1,5 @@
 <h1>This is course index</h1>
 
 <% @courses.each do |course| %>
-  <p><%= course.name %></p>
+  <p><%= link_to course.name, course_path(course) %></p>
 <% end %>
