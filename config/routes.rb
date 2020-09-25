@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   resources :courses, only: [ :index, :show ]
   resources :instructors, only: :index
+
+  get '/about', to: 'pages#about'
 end
