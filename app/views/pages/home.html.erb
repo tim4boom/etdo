@@ -34,18 +34,20 @@
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
                   <%= course.name %>
                 </div>
+                  <li><%= course.theory %></li>
               <% end %>
             <% else %>
               <%= link_to course_path(course) do %>
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
                   <%= course.name %>
                 </div>
+                  <li><%= course.theory %></li>
               <% end %>
             <% end %>
           <% end %>
         </div>
         <div class="text-center" style="margin: 40px">
-          <a href="#lp-top" style="color: #cf2b77"> Back to top</a>
+          <a href="#lp-top" style="color: black"> Back to top</a>
         </div>
       </div>
     </div>
