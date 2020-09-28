@@ -3,18 +3,28 @@ a {
 }
 
 .navbar-container {
-  text-align: center;
+  text-align: -webkit-right;
   background-color: black;
-  box-shadow: 0px -20px 5px 20px #333333;
   padding: 10px;
   font-size: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 60px;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
 }
 
 .navbar-container ul {
   margin: 0;
   padding: 0;
   text-align: right;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -29,39 +39,15 @@ a {
   display: inline-block;
   padding: 10px;
   transition: color 0.5s;
-}
-
-.navbar-container ul li .underline {
-  height: 3px;
-  background-color: transparent;
-  width: 0%;
-  transition: width 0.2s, background-color 0.5s;
-  margin: 0 auto;
-}
-
-.navbar-container ul li.active-link .underline {
-  width: 100%;
-  background-color: white;
-}
-
-.navbar-container ul li:hover .underline {
-  background-color: white;
-  width: 100%;
+  border-bottom: 3px solid black;
 }
 
 .navbar-container ul li:hover a {
-}
-
-.navbar-container ul li:active a {
-  transition: none;
-  color: rgba(255,255,255,0.76);
-}
-
-.navbar-container ul li:active .underline {
-  transition: none;
-  background-color: rgba(255,255,255,0.76);
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s;
 }
 
 .active-link {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid white !important;
 }

@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <div id="lp-top">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path 'change-oxygen.jpg'%>)">
+
+      <div class="d-flex justify-content-center">
+        <div class="general-container">
+          <div class="banner-text">
+            <h1>European Technical Dive Organization</h1>
+            <p>Bereits seit der Gründung im Jahr 2004, steht die ETDO interessierten Sporttauchern und Sporttaucherinnen als qualifizierter Ansprechpartner für Informationen rund um das technische Tauchen zur Verfügung.</p>
+            <p>Informationen zu Kursinhalten, Tauchevents und Ausbildern sind nur einen Mausklick entfernt. Viel Spaß beim Eintauchen!</p>
+            <div class="button">
+              <%= link_to "Kurse", courses_path, class: "btn-red" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="arrow-down">
+        <%= image_tag "arrow-circle-down-solid.svg", alt: "alttext" %>
+      </div>
+
+    </div>
+  </div>

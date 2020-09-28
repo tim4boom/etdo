@@ -9,4 +9,3 @@ $(function(){
   var currentPageName = getPageName(window.location.pathname);
   $('#' + currentPageName).addClass('active-link');
 });
-
