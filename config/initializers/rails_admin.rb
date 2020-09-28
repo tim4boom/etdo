@@ -11,6 +11,7 @@ RailsAdmin.config do |config|
       field :practice
       field :requirements
       field :length
+      field :favourite
     end
 
     edit do
@@ -20,6 +21,7 @@ RailsAdmin.config do |config|
       field :practice
       field :requirements
       field :length
+      field :favourite
     end
   end
 
