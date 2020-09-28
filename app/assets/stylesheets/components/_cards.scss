@@ -22,23 +22,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.fas.fa-info-circle {
-  font-size: 28px;
-  color: white;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  opacity: 0.8;
-  &:hover {
-    color: white;
-    text-decoration: none;
-    opacity: 1;
-  }
-}
-
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
