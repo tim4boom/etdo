@@ -1,31 +1,20 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-etdo">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Kurse", courses_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Instruktoren", instructors_path, class: "nav-link" %>
-        </li>
-
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+<div class="navbar-container">
+  <ul>
+    <li class="nav-link">
+      <a id="home" href="<%= home_path %>">Home</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a id="about" href="<%= about_path %>">About Us</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a id="courses" href="<%= courses_path %>">Kurse</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a id="instructors" href="<%= instructors_path %>">Instruktoren</a>
+      <div class="underline"></div>
+    </li>
+  </ul>
 </div>
