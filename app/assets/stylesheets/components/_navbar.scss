@@ -31,36 +31,36 @@ a {
   transition: color 0.5s;
 }
 
-// .navbar-container ul li .underline {
-//   height: 3px;
-//   background-color: transparent;
-//   width: 0%;
-//   transition: width 0.2s, background-color 0.5s;
-//   margin: 0 auto;
-// }
+.navbar-container ul li .underline {
+  height: 3px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.2s, background-color 0.5s;
+  margin: 0 auto;
+}
 
-// .navbar-container ul li.active-link .underline {
-//   width: 100%;
-//   background-color: white;
-// }
+.navbar-container ul li.active-link .underline {
+  width: 100%;
+  background-color: white;
+}
 
-// .navbar-container ul li:hover .underline {
-//   background-color: white;
-//   width: 100%;
-// }
+.navbar-container ul li:hover .underline {
+  background-color: white;
+  width: 100%;
+}
 
-// .navbar-container ul li:hover a {
-// }
+.navbar-container ul li:hover a {
+}
 
-// .navbar-container ul li:active a {
-//   transition: none;
-//   color: rgba(255,255,255,0.76);
-// }
+.navbar-container ul li:active a {
+  transition: none;
+  color: rgba(255,255,255,0.76);
+}
 
-// .navbar-container ul li:active .underline {
-//   transition: none;
-//   background-color: rgba(255,255,255,0.76);
-// }
+.navbar-container ul li:active .underline {
+  transition: none;
+  background-color: rgba(255,255,255,0.76);
+}
 
 .active-link {
   border-bottom: 3px solid white;
