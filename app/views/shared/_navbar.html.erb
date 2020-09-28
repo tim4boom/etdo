@@ -4,7 +4,7 @@
 
   <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
     <%= link_to home_path, class: "navbar-brand" do %>
-      <%= image_tag "" %>
+      <%= image_tag "logo.png" %>
       <% end %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,20 +14,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-link">
-          <a id="home" class="dropdown-item" href="<%= home_path %>">Home</a>
-          <div class="underline"></div>
+          <a id="home" href="<%= home_path %>">Home</a>
         </li>
         <li class="nav-link">
-          <a id="about" class="dropdown-item" href="<%= about_path %>">About Us</a>
-          <div class="underline"></div>
+          <a id="about" href="<%= about_path %>">About Us</a>
         </li>
         <li class="nav-link">
-          <a id="courses" class="dropdown-item" href="<%= courses_path %>">Kurse</a>
-          <div class="underline"></div>
+          <a id="courses" href="<%= courses_path %>">Kurse</a>
         </li>
         <li class="nav-link">
-          <a id="instructors" class="dropdown-item" href="<%= instructors_path %>">Instruktoren</a>
-          <div class="underline"></div>
+          <a id="instructors" href="<%= instructors_path %>">Instruktoren</a>
         </li>
       </ul>
     </div>

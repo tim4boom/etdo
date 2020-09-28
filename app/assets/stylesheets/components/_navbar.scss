@@ -10,6 +10,10 @@ a {
   font-size: 0;
 }
 
+.navbar-lewagon .navbar-brand img {
+  width: 60px;
+}
+
 .navbar-container ul {
   margin: 0;
   padding: 0;
@@ -50,6 +54,8 @@ a {
 }
 
 .navbar-container ul li:hover a {
+  background-color: white;
+  color: black;
 }
 
 .navbar-container ul li:active a {
