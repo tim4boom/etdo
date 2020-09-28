@@ -4,8 +4,15 @@
   padding: 100px 0;
 }
 
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner {
+    padding: 40px 0;
+  }
+}
+
 .banner h1 {
-  margin: 0;
+  font-family: $banner-font;
+  margin-bottom: 30px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
@@ -13,12 +20,12 @@
 }
 
 .banner p {
+  font-family: $banner-font;
   font-size: 20px;
   color: white;
-  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.dict-froffy {
+.banner-text {
   margin-bottom: 70px;
 }
