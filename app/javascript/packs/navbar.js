@@ -1,5 +1,3 @@
-console.log("custom js file loaded")
-
 function getPageName(url) {
   var index = url.lastIndexOf("/") + 1;
   var filenameWithExtension = url.substr(index);
