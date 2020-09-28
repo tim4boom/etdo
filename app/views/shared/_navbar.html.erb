@@ -1,20 +1,36 @@
+<%= javascript_pack_tag "navbar" %>
 <div class="navbar-container">
-  <ul>
-    <li class="nav-link">
-      <a id="home" href="<%= home_path %>">Home</a>
-      <div class="underline"></div>
-    </li>
-    <li class="nav-link">
-      <a id="about" href="<%= about_path %>">About Us</a>
-      <div class="underline"></div>
-    </li>
-    <li class="nav-link">
-      <a id="courses" href="<%= courses_path %>">Kurse</a>
-      <div class="underline"></div>
-    </li>
-    <li class="nav-link">
-      <a id="instructors" href="<%= instructors_path %>">Instruktoren</a>
-      <div class="underline"></div>
-    </li>
-  </ul>
+
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to home_path, class: "navbar-brand" do %>
+      <%= image_tag "" %>
+      <% end %>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-link">
+          <a id="home" class="dropdown-item" href="<%= home_path %>">Home</a>
+          <div class="underline"></div>
+        </li>
+        <li class="nav-link">
+          <a id="about" class="dropdown-item" href="<%= about_path %>">About Us</a>
+          <div class="underline"></div>
+        </li>
+        <li class="nav-link">
+          <a id="courses" class="dropdown-item" href="<%= courses_path %>">Kurse</a>
+          <div class="underline"></div>
+        </li>
+        <li class="nav-link">
+          <a id="instructors" class="dropdown-item" href="<%= instructors_path %>">Instruktoren</a>
+          <div class="underline"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+

@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -22,16 +23,18 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
-// External imports
-import "bootstrap";
-import $ from 'jquery';
-global.$ = jQuery;
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import "../plugins/navbar";
+// require("packs/navbar")
+
+// External imports
+import $ from 'jquery';
+global.$ = jQuery;
+import "bootstrap";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+

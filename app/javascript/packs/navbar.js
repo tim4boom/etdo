@@ -1,3 +1,5 @@
+console.log("custom js file loaded")
+
 function getPageName(url) {
   var index = url.lastIndexOf("/") + 1;
   var filenameWithExtension = url.substr(index);
@@ -9,4 +11,3 @@ $(function(){
   var currentPageName = getPageName(window.location.pathname);
   $('#' + currentPageName).addClass('active-link');
 });
-
