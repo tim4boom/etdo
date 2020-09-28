@@ -12,6 +12,7 @@ RailsAdmin.config do |config|
       field :requirements
       field :length
       field :favourite
+      field :thumbnail
     end
 
     edit do
@@ -22,6 +23,7 @@ RailsAdmin.config do |config|
       field :requirements
       field :length
       field :favourite
+      field :thumbnail
     end
   end
 
