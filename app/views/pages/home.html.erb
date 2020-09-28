@@ -14,9 +14,39 @@
         </div>
       </div>
 
-      <div id="arrow-down">
-        <%= image_tag "arrow-circle-down-solid.svg", alt: "alttext" %>
-      </div>
+      <a href="#favourite-courses">
+        <div id="arrow-down">
+          <%= image_tag "arrow-circle-down-solid.svg", alt: "alttext" %>
+        </div>
+      </a>
 
+    </div>
+  </div>
+
+  <div id="favourite-courses">
+    <div class="d-flex">
+      <div class="general-container">
+        <div class="cards">
+          <% @courses.each do |course| %>
+            <% if course.thumbnail.attached? %>
+
+              <%= link_to course_path(course) do %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path course.thumbnail.key %>')">
+                  <%= course.name %>
+                </div>
+              <% end %>
+            <% else %>
+              <%= link_to course_path(course) do %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
+                  <%= course.name %>
+                </div>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="text-center" style="margin: 40px">
+          <a href="#lp-top" style="color: #cf2b77"> Back to top</a>
+        </div>
+      </div>
     </div>
   </div>
