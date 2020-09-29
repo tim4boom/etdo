@@ -55,6 +55,7 @@
 }
 
 .card-category:hover {
+  opacity: 0.9;
   .detail-arrow-right {
     background: #f40e01;
     transition: background 0.3s ease;
