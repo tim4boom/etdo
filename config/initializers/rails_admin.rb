@@ -3,7 +3,7 @@ RailsAdmin.config do |config|
     redirect_to main_app.root_path unless current_user && current_user.admin
   end
 
-  config.model Course do
+  config.model 'Course' do
     list do
       field :name
       field :description
@@ -11,6 +11,8 @@ RailsAdmin.config do |config|
       field :practice
       field :requirements
       field :length
+      field :favourite
+      field :thumbnail
     end
 
     edit do
@@ -20,6 +22,8 @@ RailsAdmin.config do |config|
       field :practice
       field :requirements
       field :length
+      field :favourite
+      field :thumbnail
     end
   end
 
