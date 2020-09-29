@@ -24,49 +24,31 @@
   </div>
 
   <div id="favourite-courses">
-
-      <div class="general-container">
-        <div class="header">
-          <h1>Beliebte Kurse</h1>
-        </div>
-        <div class="cards">
-          <% @courses.each do |course| %>
-            <% if course.favourite == true %>
-              <% if course.thumbnail.attached? %>
-                <%= link_to course_path(course) do %>
-                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
-                    <%= course.name %>
-                    <div class="detail-box">
-                      <div class="details-text">
-                        <p>DETAILS</p>
-                      </div>
-                      <div class="detail-arrow-right">
-                        <i class="fas fa-chevron-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
-              <% else %>
-                <%= link_to course_path(course) do %>
-                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
-                    <%= course.name %>
-                    <div class="detail-box">
-                      <div class="details-text">
-                        <p>DETAILS</p>
-                      </div>
-                      <div class="detail-arrow-right">
-                        <i class="fas fa-chevron-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
+    <div class="general-container">
+      <div class="header">
+        <h1>Beliebte Kurse</h1>
+      </div>
+      <div class="cards">
+        <% @courses.each do |course| %>
+          <% if course.favourite == true %>
+            <% if course.thumbnail.attached? %>
+              <%= link_to course_path(course) do %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
+                  <%= render 'shared/course-card-grid', course: course %>
+                </div>
+              <% end %>
+            <% else %>
+              <%= link_to course_path(course) do %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
+                  <%= render 'shared/course-card-grid', course: course %>
+                </div>
               <% end %>
             <% end %>
           <% end %>
-        </div>
-        <div class="text-center" style="margin: 40px">
-          <a href="#lp-top" style="color: black"> Back to top</a>
-        </div>
+        <% end %>
       </div>
-
+      <div class="text-center" style="margin: 40px">
+        <a href="#lp-top" style="color: black"> Back to top</a>
+      </div>
+    </div>
   </div>
