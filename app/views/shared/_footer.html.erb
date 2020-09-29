@@ -1,29 +1,30 @@
 <div class="footer">
   <div class="primary-container">
     <div class="footer-links">
-      <a target="_blank" href="https://www.privacypolicygenerator.info/live.php?token=yZEnESzSnmfsHnHiyqex1sIOqOUXqNnz">Privacy Policy</a>
-      <p>
-        <%= link_to "FAQs", faq_path %>
-      </p>
-      <p>
-        <%= link_to "About Us", about_path %>
-      </p>
+      <div class="small-device">
+        <div class="spacing"><%= link_to "Disclaimer", disclaimer_path %></div>
+        <div class="spacing"><%= link_to "Impressum", imprint_path %></div>
+      </div>
+      <div class="small-device">
+        <div class="spacing"><%= link_to "AGB", terms_and_conditions_path %></div>
+        <div class="spacing"><a target="_blank" href="https://www.privacypolicygenerator.info/live.php?token=yZEnESzSnmfsHnHiyqex1sIOqOUXqNnz">Datenschutz</a></div>
+      </div>
     </div>
     <br><br>
     <div class="social-share-btn">
       <!-- To include Twitter hashtags copy+paste "&hashtags={hash_tags}" to the end of href and replace "{hash_tags}" -->
-      <a class="footer-facebook" href="https://www.facebook.com/Finmates-103276188141186/" target="_blank">
+      <a class="footer-facebook" href="#" target="_blank">
         <i id="shareBtn" class="fab fa-facebook-square"></i>
       </a>
-      <a class="footer-twitter" href="https://twitter.com/finmates_co" target="_blank">
+      <a class="footer-twitter" href="#" target="_blank">
         <i class="fab fa-twitter-square"></i>
       </a>
-      <a class="footer-linkedin" href="https://www.linkedin.com/company/finmates-co" target="_blank">
+      <a class="footer-linkedin" href="#" target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="mailto:finmatesapp@gmail.com" target="_blank">
+      <!-- <a href="mailto:finmatesapp@gmail.com" target="_blank">
         <i class="fas fa-envelope-square"></i>
-      </a>
+      </a> -->
     </div>
     <br>
     <div class="copyright">
