@@ -35,3 +35,41 @@
     margin: 80px 100px 80px 100px;
   }
 }
+
+.banner-container {
+  margin: 80px 100px 80px 100px;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner-container {
+    margin: 0 20px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .banner-container {
+    margin: 0 40px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .banner-container {
+    margin: 0 100px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .banner-container {
+    margin: 0 100px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .banner-container {
+    margin: 0 100px;
+  }
+}

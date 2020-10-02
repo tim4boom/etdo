@@ -200,7 +200,7 @@ Tec Nitrox Diver oder Äquivalent
 Gültige Tauchsportuntersuchung',
   length: 'Theorie: ca. 15 Stunden
 Praxis: 1 Schwimmbadtauchgang, 4 Freiwassertauchgänge',
-  favourite: false,
+  favourite: true,
 })
 
 puts "Creating course 7..."

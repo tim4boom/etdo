@@ -7,4 +7,16 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def disclaimer
+  end
+
+  def imprint
+  end
+
+  def terms_and_conditions
+  end
+
+  def privacy_policy
+  end
 end

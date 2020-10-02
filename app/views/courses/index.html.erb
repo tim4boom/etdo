@@ -1,5 +1,36 @@
-<h1>This is course index</h1>
+<div class="general-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path 'trimix-2.jpg'%>)"></div>
+<div class="trapezoid">
+  <div class="banner-container">
+    <h2 class="general-banner-header">KURSORGANIGRAMM.</h2>
+    <p class="general-banner-text">Bild Organigramm</p>
+  </div>
+</div>
+<div class="general-container">
+  <div class="header">
+    <h1>Kursübersicht</h1>
+  </div>
 
-<% @courses.each do |course| %>
-  <p><%= link_to course.name, course_path(course) %></p>
-<% end %>
+  <div class="cards">
+    <% @courses.each do |course| %>
+
+        <% if course.thumbnail.attached? %>
+          <%= link_to course_path(course) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
+              <%= render 'shared/course-card-grid', course: course %>
+            </div>
+          <% end %>
+        <% else %>
+          <%= link_to course_path(course) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
+              <%= render 'shared/course-card-grid', course: course %>
+            </div>
+          <% end %>
+        <% end %>
+
+    <% end %>
+  </div>
+
+  <div class="text-center" style="margin: 40px">
+    <a href="#lp-top" style="color: black"> Back to top</a>
+  </div>
+</div>

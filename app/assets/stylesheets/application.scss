@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// smooth scroll-effect
+html {
+  scroll-behavior: smooth;
+}
+
+.page-content {
+  min-height: calc(100vh - 12.5rem);
+}

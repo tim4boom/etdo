@@ -1,38 +1,38 @@
-.banner {
+.lp-banner {
   background-size: cover;
   background-position: center;
   padding: 50px 0;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
-  .banner {
+  .lp-banner {
     padding: 40px 0;
   }
 }
 
-.banner h1 {
+.lp-banner h1 {
   font-family: $banner-font;
   margin-bottom: 30px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
 }
 
-.banner p {
+.lp-banner p {
   font-family: $banner-font;
   font-size: 18px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner-text {
+.lp-banner-text {
   margin-bottom: 70px;
   max-width: 50%;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
-  .banner-text {
+  .lp-banner-text {
     max-width: 100%;
   }
 }
