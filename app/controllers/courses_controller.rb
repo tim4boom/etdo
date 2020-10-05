@@ -7,6 +7,10 @@ class CoursesController < ApplicationController
     find_course
   end
 
+  def new
+    @course = Course.new
+  end
+
   private
 
   def find_course
