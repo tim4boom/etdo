@@ -12,19 +12,19 @@
 
   <div class="cards">
     <% @courses.each do |course| %>
-        <% if course.thumbnail.attached? %>
-          <%= link_to course_path(course) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
-              <%= render 'shared/course-card-grid', course: course %>
-            </div>
-          <% end %>
-        <% else %>
-          <%= link_to course_path(course) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
-              <%= render 'shared/course-card-grid', course: course %>
-            </div>
-          <% end %>
+      <% if course.thumbnail.attached? %>
+        <%= link_to course_path(course) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
+            <%= render 'shared/course-card-grid', course: course %>
+          </div>
         <% end %>
+      <% else %>
+        <%= link_to course_path(course) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
+            <%= render 'shared/course-card-grid', course: course %>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 

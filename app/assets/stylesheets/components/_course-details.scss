@@ -1,0 +1,43 @@
+.course-details {
+  color: #221B40;
+  margin-bottom: 80px;
+  h5 {
+    font-weight: bold;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #221B40;
+  }
+}
+
+.trix-content {
+  div, li {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+.theory-practice-cards {
+  min-width: 250px;
+  height: auto;
+  justify-content: center;
+  .trix-content li {
+    line-height: 2.5 !important;
+  }
+}
+
+.theory-practice-table {
+  display: grid;
+  grid-template-columns: 1fr ;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .theory-practice-table {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
+}
+
+.theory-practice-table .trix-content li:nth-of-type(odd) {
+    background: hsla(0,0%,84.7%,.3);
+}

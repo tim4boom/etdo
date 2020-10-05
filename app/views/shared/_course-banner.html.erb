@@ -1,0 +1,24 @@
+<div class="banner-container">
+  <div class="banner-icons">
+    <%= link_to courses_path do %>
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <% end %>
+
+    <!-- Admin features -->
+    <div class="admin-features">
+      <% if user_signed_in? && current_user.admin %>
+        <%= link_to  edit_course_path(@course) do %>
+          <i class="far fa-edit"></i>
+        <% end %>
+        <%= link_to course_path(@course), method: :delete, data: {confirm: "Bist du sicher, dass du den Kurs löschen möchtest?"} do %>
+         <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Course name -->
+  <div class="course-title">
+    <h1><%= @course.name %></h1>
+  </div>
+</div>
