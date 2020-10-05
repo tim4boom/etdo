@@ -25,6 +25,11 @@
         <li class="nav-link">
           <a id="instructors" href="<%= instructors_path %>">Instruktoren</a>
         </li>
+        <% if current_user.admin == true %>
+          <li class="nav-link">
+            <a id="new" href="<%= newc_ourse_path %>">Neu</a>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

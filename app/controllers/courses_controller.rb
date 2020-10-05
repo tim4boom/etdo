@@ -11,6 +11,16 @@ class CoursesController < ApplicationController
     @course = Course.new
   end
 
+  def create
+    @course = Course.new(course_params)
+    @course.user = current_user
+    if @course.save
+      redirect_to course_path(@course)
+    else
+      render :new
+    end
+  end
+
   private
 
   def find_course
@@ -18,6 +28,6 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:name, :description, :theory, :practice, :requirements, :length, :favourite, :thumbnail)
+    params.require(:course).permit(:name, :description, :theory, :practice, :requirements, :length, :favourite, :thumbnail, :content)
   end
 end
