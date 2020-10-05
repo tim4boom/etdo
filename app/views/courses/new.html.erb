@@ -1,0 +1,24 @@
+<div class="primary-container">
+
+      <%= simple_form_for @course do |f| %>
+        <%= f.input :name %>
+
+        <%= f.label :description %>
+        <%= f.rich_text_area :description %>
+
+        <%= f.label :theory %>
+        <%= f.rich_text_area :theory %>
+
+        <%= f.label :practice %>
+        <%= f.rich_text_area :practice %>
+
+        <%= f.label :requirements %>
+        <%= f.rich_text_area :requirements %>
+
+        <%= f.label :length %>
+        <%= f.rich_text_area :length %>
+
+        <%= f.button :submit, "Publish your article", class: "btn-red" %>
+      <% end %>
+
+ </div>
