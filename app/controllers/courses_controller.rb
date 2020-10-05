@@ -20,6 +20,19 @@ class CoursesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @course.update(course_params)
+    redirect_to course_path(@course), alert: "Änderungen wurden erfolgreich gespeichert"
+  end
+
+  def destroy
+   @course.destroy
+   redirect_to courses_path, alert: "Kurs wurde erfolgreich gelöscht"
+  end
+
   private
 
   def find_course
