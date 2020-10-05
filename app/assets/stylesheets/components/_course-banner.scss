@@ -1,0 +1,53 @@
+.course-thumbnail {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.banner-icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  i,a {
+    color: white !important;
+    font-size: 20px;
+  }
+}
+
+.admin-features {
+  a {
+    margin-left: 16px;
+  }
+}
+
+.course-title {
+  color: white;
+  h1 {
+    font-weight: bold;
+  }
+}
+
+// X small devices (portrait phones, 100 px - 575px)
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner-icons {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .banner-icons {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}

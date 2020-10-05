@@ -25,6 +25,11 @@
         <li class="nav-link">
           <a id="instructors" href="<%= instructors_path %>">Instruktoren</a>
         </li>
+        <% if user_signed_in? && current_user.admin %>
+          <li class="nav-link">
+            <a id="new" href="<%= new_course_path %>">Neu</a>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

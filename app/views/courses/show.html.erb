@@ -1,10 +1,42 @@
-<h1>This is course SHOW</h1>
+<!-- Course thumbnail -->
+<div class="course-banner">
+  <% if @course.thumbnail.attached? %>
+    <div class="course-thumbnail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
+      <%= render 'shared/course-banner' %>
+    </div>
 
-<%= link_to "Kursübersicht", courses_path %>
+  <% else %>
+    <div class="course-thumbnail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
+      <%= render 'shared/course-banner' %>
+    </div>
+  <% end %>
+</div>
 
-<p><%= @course.name %></p>
-<p><%= @course.description %></p>
-<p><%= @course.theory %></p>
-<p><%= @course.practice %></p>
-<p><%= @course.requirements %></p>
-<p><%= @course.length %></p>
+<div class="general-container">
+  <div class="course-details">
+    <p><%= @course.description %></p>
+
+    <div class="theory-practice-table">
+      <div class="theory-practice-cards">
+        <h5>Inhalte der Theorie</h5>
+        <p><%= @course.theory %></p>
+      </div>
+
+      <div class="theory-practice-cards">
+        <h5>Inhalte der Praxis</h5>
+        <p><%= @course.practice %></p>
+      </div>
+    </div>
+
+    <h5>Voraussetzungen</h5>
+    <p><%= @course.requirements %></p>
+
+    <h5>Kursdauer</h5>
+    <p><%= @course.length %></p>
+  </div>
+
+  <div class="text-center" style="margin: 40px">
+    <a href="#lp-top" style="color: black"> Back to top</a>
+  </div>
+</div>
+
