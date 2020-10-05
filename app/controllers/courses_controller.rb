@@ -1,10 +1,11 @@
 class CoursesController < ApplicationController
+  before_action :find_course, only: [:show, :edit, :update, :destroy]
+
   def index
     @courses = Course.all.sort_by { |date| date.created_at}#.reverse!
   end
 
   def show
-    find_course
   end
 
   def new
@@ -21,11 +22,9 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    find_course
   end
 
   def update
-    find_course
     if @course.update(course_params)
       redirect_to @course, notice: 'Änderungen wurden erfolgreich gespeichert'
     else
