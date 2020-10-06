@@ -2,6 +2,17 @@
   margin-top: 20px;
 }
 
+.form-control {
+  margin-bottom: 20px;
+  padding: 8px 25px;
+  border-radius: 8px;
+}
+
 #course_description, #course_theory, #course_practice, #course_requirements, #course_length, #instructor_location, #instructor_contact {
   background-color: white;
+}
+
+.email, .password {
+  color: #221b40;
+  font-size: 20px;
 }
