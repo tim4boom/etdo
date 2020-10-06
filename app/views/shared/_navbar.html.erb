@@ -30,7 +30,7 @@
             <i class="fas fa-plus-circle dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <a id="new" class="dropdown-item" href="<%= new_course_path %>">Kurs</a>
-              <a id="new" class="dropdown-item" href="#">Instruktor</a>
+              <a id="new" class="dropdown-item" href="<%= new_instructor_path %>">Instruktor</a>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, id: "new", class: "dropdown-item" %>
             </div>
           </li>

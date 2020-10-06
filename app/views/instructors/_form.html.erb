@@ -1,0 +1,16 @@
+<%= simple_form_for(@instructor) do |f| %>
+  <%= f.input :name, label: "Vorname Nachname" %>
+
+  <%= f.input :avatar, as: :file, label: "Avatar", class: "form-label" %>
+
+  <%= f.label :location, "Ort", class: "form-label" %>
+  <%= f.rich_text_area :location %>
+
+  <%= f.label :contact, "Kontakt", class: "form-label" %>
+  <%= f.rich_text_area :contact %>
+
+  <div class="button">
+    <%= f.button :submit, "Update", class: "btn-red" %>
+  </div>
+
+<% end %>
