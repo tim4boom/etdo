@@ -2,9 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 60px;
-  p, a {
-    text-decoration: none;
-  }
 }
 
 .avatar-container {
@@ -28,6 +25,11 @@
   // font-weight: bold;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
 }
 
 .instructor-details {
@@ -35,6 +37,10 @@
   margin: 20px 0;
   .instructor-name {
     font-weight: bold;
+  }
+  .trix-content div {
+    font-size: 20px;
+
   }
 }
 
