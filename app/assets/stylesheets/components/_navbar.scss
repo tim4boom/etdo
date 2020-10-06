@@ -48,6 +48,25 @@ a {
   transition: background-color 0.5s;
 }
 
+.dropdown-item {
+  background-color: white !important;
+  color: black !important;
+  border-bottom: none !important;
+}
+
 .active-link {
   border-bottom: 3px solid white !important;
+}
+
+.dropdown {
+  color: white;
+  text-align: right;
+  margin: auto 0;
+  i {
+    margin-left: 10px;
+  }
+}
+
+.dropdown-toggle:empty::after {
+  margin-left: 4px !important;
 }
