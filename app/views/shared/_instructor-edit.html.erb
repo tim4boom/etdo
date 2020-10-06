@@ -1,4 +1,4 @@
-<% if current_user.admin %>
+<% if user_signed_in? && current_user.admin %>
   <%= link_to  edit_instructor_path(instructor) do %>
     <i class="far fa-edit"></i>
   <% end %>

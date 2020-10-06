@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :find_course, only: [:show, :edit, :update, :destroy]
+  # skip_before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   def index
     @courses = Course.all.sort_by { |date| date.created_at}#.reverse!
