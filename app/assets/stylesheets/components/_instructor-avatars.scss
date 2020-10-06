@@ -1,0 +1,72 @@
+.avatars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 60px;
+  p, a {
+    text-decoration: none;
+  }
+}
+
+.avatar-container {
+  text-align: center;
+}
+
+.instructor-avatar {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  border-radius: 50%;
+  // color: white;
+  // font-size: 24px;
+  // font-weight: bold;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.instructor-details {
+  color: #221b40;
+  margin: 20px 0;
+  .instructor-name {
+    font-weight: bold;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 767px) {
+  .avatars {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Large devices (desktops, 768px and up)
+@media (min-width: 768px) {
+  .avatars {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .avatars {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1600px) {
+  .avatars {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1900px) {
+  .avatars {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}

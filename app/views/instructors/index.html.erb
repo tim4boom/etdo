@@ -1,7 +1,34 @@
-<h1>This is instructor index</h1>
+<div class="general-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path 'divers.jpg'%>)"></div>
+<div class="trapezoid">
+  <div class="banner-container">
+    <h2 class="general-banner-header">STANDORTE DER INSTRUKTOREN</h2>
+    <p class="general-banner-text">Karte mit Standorten</p>
+  </div>
+</div>
+<div class="general-container">
+  <div class="header">
+    <h1>Unsere Instruktoren</h1>
+  </div>
 
-<% @instructors.each do |instructor| %>
-  <p><%= instructor.name %></p>
-  <p><%= instructor.location %></p>
-  <p><%= instructor.contact %></p>
-<% end %>
+  <div class="avatars">
+    <% @instructors.each do |instructor| %>
+      <% if instructor.avatar.attached? %>
+        <div class="avatar-container">
+          <div class="instructor-avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(instructor.avatar) %>')">
+          </div>
+          <%= render 'shared/instructor-avatar', instructor: instructor %>
+        </div>
+      <% else %>
+        <div class="avatar-container">
+          <div class="instructor-avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default-avatar.jpeg'%>)">
+          </div>
+          <%= render 'shared/instructor-avatar', instructor: instructor %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="text-center" style="margin: 40px">
+    <a href="#lp-top" style="color: black"> Back to top</a>
+  </div>
+</div>
