@@ -1,19 +1,19 @@
 <%= simple_form_for(@course) do |f| %>
   <%= f.input :name %>
 
-  <%= f.label :description %>
+  <%= f.label :description, "Beschreibung" %>
   <%= f.rich_text_area :description %>
 
-  <%= f.label :theory %>
+  <%= f.label :theory, "Inhalte der Theorie" %>
   <%= f.rich_text_area :theory %>
 
-  <%= f.label :practice %>
+  <%= f.label :practice, "Inhalte der Praxis" %>
   <%= f.rich_text_area :practice %>
 
-  <%= f.label :requirements %>
+  <%= f.label :requirements, "Voraussetzungen" %>
   <%= f.rich_text_area :requirements %>
 
-  <%= f.label :length %>
+  <%= f.label :length, "Kursdauer" %>
   <%= f.rich_text_area :length %>
 
   <div class="button">
