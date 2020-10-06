@@ -1,6 +1,8 @@
 <%= simple_form_for(@course) do |f| %>
   <%= f.input :name %>
 
+  <%= f.input :thumbnail, as: :file, label: "Thumbnail", class: "form-label" %>
+
   <%= f.label :description, "Beschreibung", class: "form-label" %>
   <%= f.rich_text_area :description %>
 
