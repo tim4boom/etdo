@@ -1,0 +1,23 @@
+.banner-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 60px;
+  padding-bottom: 40px;
+  max-width: 792px;
+  margin: auto;
+}
+
+.map img {
+  width: 100%;
+}
+
+.text {
+  margin: auto;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 768px) {
+  .banner-flex {
+    grid-template-columns: 1fr;
+  }
+}
