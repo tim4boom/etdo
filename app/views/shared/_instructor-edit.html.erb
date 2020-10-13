@@ -1,5 +1,10 @@
-<% if user_signed_in? && current_user.admin %>
-  <%= link_to  edit_instructor_path(instructor) do %>
-    <i class="far fa-edit"></i>
+<div class="instructor-admin">
+  <% if user_signed_in? && current_user.admin %>
+    <%= link_to edit_instructor_path(instructor) do %>
+      <i class="far fa-edit"></i>
+    <% end %>
+    <%= link_to instructor_path(instructor), method: :delete, data: {confirm: "Bist du sicher, dass du den Kurs löschen möchtest?"} do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
   <% end %>
-<% end %>
+</div>

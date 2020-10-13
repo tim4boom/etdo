@@ -1,0 +1,31 @@
+.zoom {
+  padding-bottom: 40px;
+  img {
+    width: 100%;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .zoom img {
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .zoom img {
+    &:hover {
+      transform: scale(1.2);
+      background-color: #F9DB4B;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .zoom {
+    img {
+      max-width: 792px;
+    }
+  }
+}

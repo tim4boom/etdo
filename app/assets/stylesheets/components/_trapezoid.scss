@@ -1,7 +1,7 @@
 .general-banner {
   background-size: cover;
   background-position: center;
-  height: 275px;
+  height: 500px;
 }
 
 .general-banner-header {
@@ -24,5 +24,9 @@
   text-align: center;
 }
 
-
-
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .general-banner {
+    height: 275px;
+  }
+}

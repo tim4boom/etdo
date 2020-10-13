@@ -97,15 +97,9 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1726px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 1900px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
