@@ -39,7 +39,7 @@
               <% end %>
             <% else %>
               <%= link_to course_path(course) do %>
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.jpeg'%>)">
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.png'%>)">
                   <%= render 'shared/course-card-grid', course: course %>
                 </div>
               <% end %>
