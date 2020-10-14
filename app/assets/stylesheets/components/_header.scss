@@ -16,8 +16,14 @@
   }
 }
 
-.paragraph p {
+.paragraph {
   text-align: center;
+  p, h5, a {
   margin: auto;
   max-width: 1200px;
+  color: #221B40;
+  }
+  a {
+    font-size: 24px;
+  }
 }
