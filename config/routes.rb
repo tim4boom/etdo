@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/disclaimer', to: 'pages#disclaimer'
   get '/imprint', to: 'pages#imprint'
-  get '/terms-and-conditions', to: 'pages#terms_and_conditions'
+  get '/data-protection', to: 'pages#data_protection'
 end

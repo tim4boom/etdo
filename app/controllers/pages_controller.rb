@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   def imprint
   end
 
-  def terms_and_conditions
+  def data_protection
   end
 
   def privacy_policy
