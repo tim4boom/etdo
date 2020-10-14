@@ -16,7 +16,7 @@
     <% @courses.each do |course| %>
       <% if course.thumbnail.attached? %>
         <%= link_to course_path(course) do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path course.thumbnail.key %>')">
             <%= render 'shared/course-card-grid', course: course %>
           </div>
         <% end %>
