@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <a href="#favourite-courses">
+      <a href="#about-us">
         <div id="arrow-down">
           <%= image_tag "arrow-circle-down-solid.svg", alt: "alttext" %>
         </div>
@@ -23,30 +23,47 @@
     </div>
   </div>
 
-  <div id="favourite-courses">
+  <div id="about-us">
     <div class="general-container">
       <div class="header">
-        <h1>Beliebte Kurse</h1>
+        <h1>Über die ETDO</h1>
       </div>
-      <div class="cards">
-        <% @courses.each do |course| %>
-          <% if course.favourite == true %>
-            <% if course.thumbnail.attached? %>
-              <%= link_to course_path(course) do %>
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= rails_blob_url(course.thumbnail) %>')">
-                  <%= render 'shared/course-card-grid', course: course %>
-                </div>
-              <% end %>
-            <% else %>
-              <%= link_to course_path(course) do %>
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.png'%>)">
-                  <%= render 'shared/course-card-grid', course: course %>
-                </div>
-              <% end %>
-            <% end %>
-          <% end %>
-        <% end %>
+
+      <div class="paragraph">
+        <p>Im Tauchsport gibt es inzwischen eine große Anzahl an ambitionierten Sporttaucher und Sporttaucherinnen, die sich für das technische Tauchen interessieren. Unsere Instruktoren bilden seit vielen Jahren in <strong>verschiedenen Bereichen des Sport- und des technischen Tauchens </strong>aus und freuen sich, ihre Erfahrungen weitergeben zu können.</p>
       </div>
+
+      <div class="header">
+        <h1>Vorteile der ETDO</h1>
+      </div>
+
+      <!-- Benefit 1 -->
+      <div class="card-product">
+        <%= image_tag "einstieg.png" %>
+        <div class="card-product-infos">
+          <h2>Der richtige Einstieg</h2>
+          <p>Da im Tauchsport häufig der richtige Einstieg fehlt, ist die ETDO die ideale Anlaufstelle für technische Taucher/innen, die ihr Können & Wissen austesten und weiterentwickeln wollen.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 2 -->
+      <div class="card-product">
+        <%= image_tag "learn.png" %>
+        <div class="card-product-infos">
+          <h2>Regelmäßige Fortbildung</h2>
+          <p>Anspruch der Instruktoren ist es, stets informiert zu bleiben und sich regelmäßig weiterzubilden. So kann Ihnen jederzeit eine erstklassige und zeitgemäße Ausbildung angeboten werden.</p>
+        </div>
+      </div>
+
+      <!-- Benefit 3 -->
+      <div class="card-product">
+        <%= image_tag "safe.png" %>
+        <div class="card-product-infos">
+          <h2>Sicheres Tauchen</h2>
+          <p>Um stets sicher tauchen zu können, stehen medizinische und sonstige relevante Grundlagen im Fokus der Ausbildung - inkl. verschiedener Notszenarien und Problemlösungen.</p>
+        </div>
+      </div>
+
       <%= render "shared/arrow-up" %>
     </div>
   </div>
