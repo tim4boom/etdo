@@ -2,7 +2,7 @@ class InstructorsController < ApplicationController
   before_action :find_instructor, only: [:edit, :update, :destroy]
 
   def index
-    @instructors = Instructor.all
+    @instructors = Instructor.all.sort_by { |e| [e.name == "Peter Heidemann" ? 0 : 1, e.name] }
   end
 
   def new
